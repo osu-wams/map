@@ -5,7 +5,7 @@
       "name": "Chrome",
       "type": "chrome",
       "request": "launch",
-      "url": "http://dev.map.oregonstate.edu:3000",
+      "url": "http://local.dev.oregonstate.edu:3000",
       "webRoot": "${workspaceRoot}/src",
       "sourceMapPathOverrides": {
         "webpack:///src/*": "${webRoot}/*"
