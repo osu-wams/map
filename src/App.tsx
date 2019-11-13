@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import Map from './Map';
+import Map from './map/Map';
 
+const apiKey = process.env.REACT_APP_GA_MAPS_KEY as string;
 const defaultProps = {
+  apiKey,
   center: {
     lat: 44.5615578,
     lng: -123.2780367
