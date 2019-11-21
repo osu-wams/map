@@ -4,11 +4,11 @@ const drawPolygon = (map: google.maps.Map, polygon: [number[]]) => {
   const path = polygon.map(coords => new google.maps.LatLng(coords[1], coords[0]));
 
   let drawnPolygon = new window.google.maps.Polygon({
-    fillOpacity: 0.8,
-    fillColor: '#444',
-    strokeColor: '#aaa',
-    strokeOpacity: 1,
-    strokeWeight: 1,
+    fillOpacity: 1,
+    fillColor: '#D4CFCD',
+    strokeColor: '',
+    strokeOpacity: 0,
+    strokeWeight: 0,
     paths: path
   });
   drawnPolygon.setMap(map);

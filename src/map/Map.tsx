@@ -12,12 +12,18 @@ export interface IMap {
     lng: number;
   };
   zoom: number;
+  options: {
+    styles: string;
+  }
 }
 const handleApiLoaded = (map: google.maps.Map, maps, locations: ILocation[]) => {
   if (locations !== undefined) {
     locations.forEach(l => drawLocation(map, l));
   }
 };
+
+export const lightStyle = require("./styles/light_map.json");
+export const darkStyle = require("./styles/dark_map.json");
 
 const Map = (props: IMap) => {
   const [locations, setLocations] = useState();
@@ -33,6 +39,7 @@ const Map = (props: IMap) => {
         bootstrapURLKeys={{ key: props.apiKey, libraries: 'places' }}
         defaultCenter={props.center}
         defaultZoom={props.zoom}
+        options={{ styles: lightStyle }}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps, locations)}
       >
