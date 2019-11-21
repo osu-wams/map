@@ -22,8 +22,8 @@ const handleApiLoaded = (map: google.maps.Map, maps, locations: ILocation[]) => 
   }
 };
 
-const lightStyle = require("./styles/light_map.json");
-const darkStyle = require("./styles/dark_map.json");
+export const lightStyle = require("./styles/light_map.json");
+export const darkStyle = require("./styles/dark_map.json");
 
 const Map = (props: IMap) => {
   const [locations, setLocations] = useState();
