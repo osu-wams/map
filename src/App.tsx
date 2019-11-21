@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import Map from './map/Map';
-import { lightStyle } from './map/Map';
-import { darkStyle } from './map/Map';
+import { lightStyle, darkStyle } from './map/Map';
 
 const apiKey = process.env.REACT_APP_GA_MAPS_KEY as string;
 const defaultProps = {
